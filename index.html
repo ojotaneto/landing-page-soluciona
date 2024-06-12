@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciona</title>
+
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: "poppins";
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      position: relative;
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .menu-button {
+      display: block;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .menu-button:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+      background-color: #000;
+      font-weight: bold;
+    }
+
+    ul li {
+      border-bottom: 1px solid #fff;
+    }
+
+    ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    ul li a:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .menu-button {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      ul li {
+        border: none;
+        margin: 0 15px;
+      }
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .fixed-button img {
+      width: 50px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+
+    .row-2 img {
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    .col-1 {
+      color: #000000;
+      text-align: center;
+    }
+
+    .col-1 h1 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .col-1 p {
+      font-size: 1em;
+    }
+
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .col-1 .cta-button {
+      margin-top: 30px;
+      display: inline-block;
+    }
+
+    .cta-container {
+      text-align: center;
+
+    }
+
+    .cta-container h2 {
+      display: inline-block;
+      margin-top: 25px
+    }
+
+    .container-2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container-2 p {
+      display: inline-block;
+      width: 80%;
+    }
+
+    .container-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      margin: 10px;
+      min-width: 250px;
+    }
+    
+    .footer-center a{ 
+      color: white; 
+
+    }
+
+    .footer-left h3,
+    .footer-center h3,
+    .footer-right h3 {
+      border-bottom: 1px solid #777;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      background-color: #222;
+      padding: 10px 0;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .fixed-button img {
+        width: 90px;
+      }
+
+      .container {
+        padding: 50px 0 50px 50px;
+        flex-direction: row;
+        height: 80vh;
+        justify-content: space-between;
+      }
+
+
+      .col-1 h1 {
+        font-size: 3em;
+        font-weight: bold;
+      }
+
+      .col-1 p {
+        font-size: 1em;
+      }
+
+      .col-2 {
+        width: 40%;
+      }
+
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('ul');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <nav>
+    <button class="menu-button" onclick="toggleMenu()">Menu</button>
+    <ul>
+      <li><a href="#fale-conosco">Fale Conosco</a></li>
+      <li><a href="#sobre-nos">Sobre Nós</a></li>
+      <li><a href="#contratar">Contratar</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="container">
+    <div class="row-1 col-1">
+      <h1> Não deixe o banco levar <br> seu carro!</h1>
+      <p>Fale com um de nossos especialistas e saiba como podemos te ajudar.</p>
+
+      <a href="https://wa.me/5581996712788" class="cta-button"> Falar agora com um especialista</a>
+    </div>
+    <div class="row-2 col-2 cta-container">
+      <img src="onix-cortado.png" alt="carro" class="image">
+      <h2><strong>Até 80% de desconto na dívida do seu veículo.</strong></h2>
+    </div>
+  </section>
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container-2">
+    <h2>Quem somos?</h2>
+    <p>Somos uma empresa que nasceu em Pernabuco e nosso foco é não deixar que sua vida vire de ponta cabeça por conta
+      da divida do seu carro.
+      Estamos no mercado automotivo a mais de cinco anos, evitamos que o banco leve se carro e faça você perder dinheiro
+      e ficar com o nome sujo.
+      Trazendo de volta a saúde da sua vida financeira.
+    </p>
+  </div>
+
+  <div class="container-button">
+
+    <a href="https://wa.me/5581996712788" class="cta-button"> contratar serviço</a>
+  </div>
+
+  <div class="container-2">
+    <h2>Nossos serviços</h2>
+    <p> <strong>1 - Limpa-nome</strong> Onde enviamos seus documentos para um escritório jurídico, que envia para um
+      juiz
+      uma solicitação de
+      retirada do apontamento do seu nome dos orgãos de crédito (SPC e Serasa) por 12 meses para que você se organize
+      financeiramente podendo usar seu nome livremente
+      <br>
+      <strong>2 - Car-save</strong> onde compramos seu carro antes que o banco venha buscá-lo, renegociamos sua dívida e
+      conseguimos até 80% de desconto nela e colocamos dinheiro no seu bolso dependendo do acordo feito com nosso time.
+    </p>
+  </div>
+
+  <div class="container-button">
+
+    <a href="https://wa.me/5581996712788" class="cta-button">Entrar em contato agora</a>
+  </div>
+
+  <a href="https://wa.me/5581996712788">
+    <button class="fixed-button">
+      <img src="icone.png" alt="Ícone do botão">
+    </button>
+  </a>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Sobre Nós</h3>
+        <p>Informações sobre a empresa, missão, visão e valores.</p>
+      </div>
+      <div class="footer-center">
+        <h3>Links Úteis</h3>
+
+        <a href="#">Serviços</a><br>
+        <a href="#">Contato</a><br>
+        <a href="#">Sobre</a><br>
+
+      </div>
+      <div class="footer-right">
+        <h3>Contato</h3>
+        <p>Email: cars.soluciona.services@gmail.com</p>
+        <p>Telefone: (81) 99671-2788</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Soluciona. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
